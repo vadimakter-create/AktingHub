@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Актерские упражнения - База знаний</title>
+    <meta name="description" content="Полная база упражнений по актерскому мастерству: Станиславский, Чехов, Мейерхольд и другие методики">
+    <meta name="keywords" content="актерское мастерство, упражнения, Станиславский, Чехов, Мейерхольд, театр">
+    <meta property="og:title" content="Актерские упражнения - База знаний">
+    <meta property="og:description" content="Полная база упражнений по актерскому мастерству">
+    <meta name="twitter:title" content="Актерские упражнения - База знаний">
+    <meta name="twitter:description" content="Полная база упражнений по актерскому мастерству">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #8B5CF6;
+            --secondary-color: #F3F4F6;
+            --accent-color: #F59E0B;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+        }
+    }
+
+    @layer components {
+        .category-card {
+            @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer border border-gray-200;
+        }
+        
+        .exercise-card {
+            @apply bg-white rounded-lg shadow-sm p-4 border border-gray-100 hover:border-[var(--primary-color)] transition-colors;
+        }
+        
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors;
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--secondary-color)] text-[var(--text-primary)] px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors;
+        }
+    }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Navigation.js"></script>
+    <script type="text/babel" src="components/SearchBar.js"></script>
+    <script type="text/babel" src="components/CategoryGrid.js"></script>
+    <script type="text/babel" src="components/ExerciseCard.js"></script>
+    <script type="text/babel" src="components/UserProfile.js"></script>
+    <script type="text/babel" src="utils/exerciseData.js"></script>
+    <script type="text/babel" src="utils/userUtils.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
